@@ -1,16 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />        
-    <title>Score Page</title>
-    <link rel="stylesheet" href="scoreCardCSS.css">
-</head>
-<body>
-    <div class="scoreCard">
-       <p>Congratulations</p><br>
-       <p> You finished your quiz</p><br>
-       <p> Your score is </p>
-    </div>  
-</body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Score Page - EcoQuiz</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="scoreCardCSS.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Script -->
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav class="d-flex justify-content-between align-items-center">
+          <a href="index.html" class="logo">EcoQuiz</a>
+          <ul class="menu">
+            <li class="item"><a href="#">My Score</a></li>
+            <li class="item"><a href="#">About</a></li>
+            <li class="item"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="main-card score">
+          <img src="img/cat-2.png" alt="Final score" class="img-responsive score-img" />
+          <h1 class="text-centered">Congratulations!</h1>
+          <h2 class="text-centered">You finished your quiz!</h2>
+          <p class="text-centered">Your score is <strong>XX</strong></p>
+          <a href="index.html" class="btn">Try again</a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <h3>Picture credits</h3>
+        <section class="grid grid-3-columns">
+          <div>
+            <ul>
+              <li>
+                <a href="https://www.flaticon.com/free-stickers/pollution" title="pollution stickers" target="_blank"
+                  >Pollution stickers created by kerismaker - Flaticon</a
+                >
+              </li>
+              <li>
+                <a href="https://www.flaticon.com/free-stickers/plastic" title="plastic stickers" target="_blank"
+                  >Plastic stickers created by Stickers - Flaticon</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.flaticon.com/free-stickers/ecology-and-environment"
+                  title="ecology and environment stickers"
+                  target="_blank"
+                  >Ecology and environment stickers created by Stickers - Flaticon</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li>
+                <a
+                  href="https://www.flaticon.com/free-stickers/renewable-energy"
+                  title="renewable energy stickers"
+                  target="_blank"
+                  >Renewable energy stickers created by Manuel Viveros - Flaticon</a
+                >
+              </li>
+              <li>
+                <a href="https://www.flaticon.com/free-stickers/nature" title="nature stickers" target="_blank"
+                  >Nature stickers created by Stickers - Flaticon</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.flaticon.com/free-stickers/ecology-and-environment"
+                  title="ecology and environment stickers"
+                  target="_blank"
+                  >Ecology and environment stickers created by Manuel Viveros - Flaticon</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li>
+                <a href="https://www.flaticon.com/free-stickers/nature" title="nature stickers" target="_blank"
+                  >Nature stickers created by Stickers - Flaticon</a
+                >
+              </li>
+              <li>
+                <a href="https://www.flaticon.com/free-stickers/nature" title="nature stickers" target="_blank"
+                  >Nature stickers created by Manuel Viveros - Flaticon</a
+                >
+              </li>
+              <li>
+                <a href="https://www.flaticon.com/free-stickers/pollution" title="pollution stickers" target="_blank"
+                  >Pollution stickers created by Stickers - Flaticon</a
+                >
+              </li>
+            </ul>
+          </div>
+        </section>
+        <div class="text-centered">
+          © 2023 EcoQuiz | Coded with 💚 by Green Defenders
+          <a
+            href="https://github.com/chpsalesforce/HACKATHON_WWC_Codebase"
+            title="SOCIAL GOOD HACKATHON - Women who code"
+            target="_blank"
+            rel="nofollow"
+            >open sourced on GitHub</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
