@@ -37,42 +37,19 @@ if (mysqli_num_rows($result) > 0)
             {
                 $isCorrect = $i;
             }
-            // $options[$i] = [
-            //     'aid' => $row['id'],
-            //     'answer' => $row['answer'],
-            //     'is_correct' => $row['is_correct']
-            // ];
             $i++;
         }
         $question['choices'] = $options;
         $question['correct'] = $isCorrect;
-        // print_r($question);
-
-        // $questions[] = $question;
+        
         array_push($questions, $question);
     }
-
-    // $_SESSION['questionId'] = $question['qid'];
-
-    // mysqli_free_result($result);
-
-    
-
-    
-    // mysqli_free_result($result);
-
-    // $answers = [
-    //     'choices' => $options,
-    //     'correct' => $isCorrect,
-    // ];
-
-    // $data = array_merge($question, $answers);
     echo json_encode($questions);
 }
-// else 
-// {
-//     echo '';
-// }
+else 
+{
+    echo '';
+}
 
 
 

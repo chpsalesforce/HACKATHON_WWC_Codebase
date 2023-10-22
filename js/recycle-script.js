@@ -18,7 +18,7 @@ function loadQuestion() {
     type: "GET", 
     url: "app/question.php", 
     data: uri, 
-    success: function (response) { //console.log(response);
+    success: function (response) { 
         if (response !== '')
         {
           questions = JSON.parse(response);
