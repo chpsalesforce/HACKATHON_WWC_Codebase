@@ -1,4 +1,4 @@
-let questions = '';
+let questions = "";
 let currentQuestion = 0;
 let score = 0;
 
@@ -9,10 +9,10 @@ const nextButton = document.getElementById("nextButton");
 
 function loadQuestion() {
   const uri = window.location.search.replace("?", "");
-  const category_id = (uri.split('&')[0]).split('=')[1];
-  const no = (uri.split('&')[1]).split('=')[1];
-  $('#category').val(category_id);
-  $('#currentNo').val(no);
+  const category_id = uri.split("&")[0].split("=")[1];
+  const no = uri.split("&")[1].split("=")[1];
+  $("#category").val(category_id);
+  $("#currentNo").val(no);
 
   $.ajax({
     type: "GET", 
@@ -94,21 +94,20 @@ function continueQuiz() {
   resultElement.textContent = ""; // Clear the result message
   resultElement.style.backgroundColor = ""; // Remove the background color
   resultElement.style.border = ""; // Remove the border color
-  const category_id = $('#category').val();
+  const category_id = $("#category").val();
   currentQuestion++;
   if (currentQuestion < questions.length) {
     loadQuestion();
   } else {
     $.ajax({
-      type: "POST", 
-      url: "app/save_score.php", 
-      data: "cat=" + category_id + "&score=" + score, 
+      type: "POST",
+      url: "app/save_score.php",
+      data: "cat=" + category_id + "&score=" + score,
       success: function (response) {
         questionElement.textContent = `Quiz completed. You got ${score} out of ${questions.length} questions correct.`;
         choicesElement.innerHTML = "";
       },
     });
-    
   }
 }
 
@@ -119,4 +118,4 @@ function chooseCategory(cat) {
 // Add a click event listener to the "Next" button
 nextButton.addEventListener("click", continueQuiz);
 
-loadQuestion();
+$(document).ready(loadQuestion);

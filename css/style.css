@@ -303,6 +303,23 @@ button#nextButton:hover {
   padding: 1rem 2rem;
 }
 
+/* Score page */
+
+.score-img {
+  animation: slow-animation 1.5s alternate infinite ease-in-out;
+  max-width: 200px;
+  transition: all 300ms ease-in-out;
+}
+
+@keyframes slow-animation {
+  0% {
+    transform: rotateZ(-8deg); 
+  }
+  100% {
+    rotateZ(8deg);   
+  }
+}
+
 /* Footer section */
 
 footer section {
