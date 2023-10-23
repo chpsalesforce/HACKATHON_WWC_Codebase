@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="scoreCardCSS.css" />
     <link rel="stylesheet" href="css/style.css" />
     <!-- Script -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/score.js"></script>
   </head>
   <body>
     <header>
@@ -15,7 +17,7 @@
         <nav class="d-flex justify-content-between align-items-center">
           <a href="index.html" class="logo">EcoQuiz</a>
           <ul class="menu">
-            <li class="item"><a href="#">My Score</a></li>
+            <li class="item"><a href="scoreCard.html">My Score</a></li>
             <li class="item"><a href="#">About</a></li>
             <li class="item"><a href="#">Contact</a></li>
           </ul>
@@ -28,7 +30,7 @@
           <img src="img/cat-2.png" alt="Final score" class="img-responsive score-img" />
           <h1 class="text-centered">Congratulations!</h1>
           <h2 class="text-centered">You finished your quiz!</h2>
-          <p class="text-centered">Your score is <strong>XX</strong></p>
+          <p class="text-centered">Your score is <strong><span id="score">XX</span></strong></p>
           <a href="index.html" class="btn">Try again</a>
         </div>
       </div>
