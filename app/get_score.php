@@ -2,9 +2,7 @@
 
 include 'config/connection.php';
 
-$category_id = $_GET['cat'];
-
-$sql = "SELECT COUNT(*) AS total_question FROM questions WHERE is_enabled = 1";
+$sql = "SELECT COUNT(*) AS total_question FROM questions";
 $result = mysqli_query($conn, $sql);
 while($row = mysqli_fetch_array($result))
 {
