@@ -19,13 +19,13 @@
 
 
 # About The Project
-The Environmental Interactive Quiz Game is an educational and fun tool designed to teach kids about pressing environmental issues like climate change, pollution, and more. This README.md file will provide an overview of the project, how to set it up, and how to contribute.
+The Environmental Interactive Quiz Game is an educational and fun tool designed to teach kids about pressing environmental issues like climate change, pollution, and more. These issues pose significant threats to our planet, and educating children is crucial to fostering a sense of responsibility and inspiring sustainable actions. By engaging kids through a fun and interactive quiz game, we aim to make learning about the environment both enjoyable and effective.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
 # Prerequisites
-Outline the needed knowledge, hardware components, software pre-installations...
+Standard American English reading age level of third grade. Be able to navigate the web and interact with the various buttons.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
@@ -37,15 +37,6 @@ Outline the needed knowledge, hardware components, software pre-installations...
     Score tracking to encourage improvement.
     Customizable levels of difficulty.
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-# Documentation
-- [Instructions](./instructions.md)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-# Troubleshooting
-- If running into permission errors, add **sudo** infront of your command
 
 
 # Contributing
@@ -63,14 +54,14 @@ Contributions are what make the open source community such an amazing place to l
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 # License
-Distributed under the MIT License. See [License](https://github.com/wonntann/repo-template/blob/main/LICENSE) for more information.
+Distributed under the MIT License. See [License]([https://github.com/wonntann/repo-template/blob/main/LICENSE](https://github.com/chpsalesforce/HACKATHON_WWC_Codebase/blob/main/LICENSE) for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 # Contact
 Tanya - [@wonntann](https://twitter.com/wonntann)
 
-Project Link: [https://github.com/wonntann/gitHub](https://github.com/wonntann/repo-template)
+Project Link: [https://github.com/wonntann/gitHub](https://github.com/chpsalesforce/HACKATHON_WWC_Codebase/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
