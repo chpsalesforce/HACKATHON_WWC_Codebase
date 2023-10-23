@@ -8,10 +8,8 @@
 - [Welcome to Our Social Good Project](#welcome-to-our-social-good-project)
 - [Table of Contents](#table-of-contents)
 - [About The Project](#about-the-project)
-- [Prerequisites](#prerequisites)
 - [Features](#features)
-- [Documentation](#documentation)
-- [Troubleshooting](#troubleshooting)
+  
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
