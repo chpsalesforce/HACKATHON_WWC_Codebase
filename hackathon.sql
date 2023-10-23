@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 20, 2023 at 01:10 PM
+-- Generation Time: Oct 23, 2023 at 10:12 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.15
 
@@ -77,9 +77,9 @@ INSERT INTO `answers` (`id`, `question_id`, `answer`, `is_correct`, `is_enabled`
 (35, 9, 'C) They are vital to the balance of marine ecosystems', 1, 1),
 (36, 9, 'D) They don\'t need protection', 0, 1),
 (37, 10, 'A) Potato power', 0, 1),
-(38, 10, 'B) Wind power', 0, 1),
+(38, 10, 'B) Wind power', 1, 1),
 (39, 10, 'C) Candy power', 0, 1),
-(40, 10, 'D) Rainbow power', 1, 1),
+(40, 10, 'D) Rainbow power', 0, 1),
 (41, 11, 'A) Solar power', 0, 1),
 (42, 11, 'B) Wind power', 0, 1),
 (43, 11, 'C) Geothermal power', 1, 1),
@@ -105,13 +105,21 @@ INSERT INTO `answers` (`id`, `question_id`, `answer`, `is_correct`, `is_enabled`
 (63, 16, 'C) To protect against water scarcity and ensure there\'s enough for everyone', 1, 1),
 (64, 16, 'D) To create more puddles to jump in', 0, 1),
 (65, 17, 'A) Taking short showers', 0, 1),
-(66, 17, 'B) Turning off the tap while brushing your teeth', 1, 1),
-(67, 17, 'C) Leaving the hose running while playing', 0, 1),
+(66, 17, 'B) Turning off the tap while brushing your teeth', 0, 1),
+(67, 17, 'C) Leaving the hose running while playing', 1, 1),
 (68, 17, 'D) Fixing leaky faucets', 0, 1),
 (69, 18, 'A) Everyone gets a water balloon', 0, 1),
 (70, 18, 'B) People have to walk long distances for dirty water', 0, 1),
 (71, 18, 'C) Water fights break out', 0, 1),
-(72, 18, 'D) Nothing, it\'s always available', 1, 1);
+(72, 18, 'D) Nothing, it\'s always available', 1, 1),
+(73, 23, 'A) Reduce, Reuse, Recycle', 1, 1),
+(74, 23, 'B) Refuse, Reduce, Recycle', 0, 1),
+(75, 23, 'C) Repair , Rock , Roll', 0, 1),
+(76, 23, 'D) Rehome, Recycle, Repair', 0, 1),
+(77, 24, 'A) Reuse shopping bags', 0, 1),
+(78, 24, 'B) Use steel straws', 0, 1),
+(79, 24, 'C) Pick up plastic litter', 0, 1),
+(80, 24, 'D) All of them', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -173,7 +181,34 @@ INSERT INTO `questions` (`id`, `category_id`, `number`, `question`, `incorrect_r
 (15, 5, 3, 'What can we do to reduce our carbon footprint and fight climate change?', 'That\'s not it, but you\'re learning. The correct answer is B) Reduce, reuse, and recycle. These actions help reduce your carbon footprint and fight climate change. Keep up the good work!'),
 (16, 6, 1, 'Why is it important to conserve water in your daily life?', 'Nice try, but the correct answer is C) To protect against water scarcity and ensure there\'s enough for everyone. Conserving water is vital for the future. Keep learning about water conservation!'),
 (17, 6, 2, 'Which of the following activities is a big water waster?', 'Not quite! The correct answer is C) Leaving the hose running while playing. That\'s a big water waster. Keep practicing water-saving habits!'),
-(18, 6, 3, 'What can happen when there isn\'t enough clean water for people to drink?', 'Almost there, but the correct answer is B) People have to walk long distances for dirty water. This is a serious problem in some places. Keep exploring the importance of clean water!');
+(18, 6, 3, 'What can happen when there isn\'t enough clean water for people to drink?', 'Almost there, but the correct answer is B) People have to walk long distances for dirty water. This is a serious problem in some places. Keep exploring the importance of clean water!'),
+(23, 2, 4, 'What are the 3 R’s of waste management?', 'Nice try, but the correct answer is A. Reduce the amount of waste you produce. Reuse items as much as you can before replacing them.'),
+(24, 2, 5, 'What can you do to help stop plastic pollution?', 'You\'re almost there, but the correct answer is D. Avoid single-use plastics. Use eco-friendly alternatives to plastic.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `scores`
+--
+
+CREATE TABLE `scores` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `category_id` int(11) NOT NULL,
+  `score` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `scores`
+--
+
+INSERT INTO `scores` (`id`, `user_id`, `category_id`, `score`) VALUES
+(61, 1, 2, 3),
+(62, 1, 1, 1),
+(63, 1, 4, 1),
+(64, 1, 3, 1),
+(65, 1, 6, 2),
+(66, 1, 5, 2);
 
 -- --------------------------------------------------------
 
@@ -183,11 +218,19 @@ INSERT INTO `questions` (`id`, `category_id`, `number`, `question`, `incorrect_r
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
-  `username` int(11) NOT NULL,
-  `password` int(11) NOT NULL,
-  `email` int(11) NOT NULL,
+  `username` varchar(25) NOT NULL,
+  `password` varchar(30) NOT NULL,
+  `fullname` varchar(255) NOT NULL,
+  `email` varchar(50) NOT NULL,
   `joined_date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `password`, `fullname`, `email`, `joined_date`) VALUES
+(1, 'sarahg', '12345', 'Sarah Green', 'sarah.green@mymail.com', '2023-10-22 04:21:45');
 
 --
 -- Indexes for dumped tables
@@ -212,6 +255,12 @@ ALTER TABLE `questions`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `scores`
+--
+ALTER TABLE `scores`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -225,7 +274,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `answers`
 --
 ALTER TABLE `answers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -237,13 +286,19 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `questions`
 --
 ALTER TABLE `questions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
+--
+-- AUTO_INCREMENT for table `scores`
+--
+ALTER TABLE `scores`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
