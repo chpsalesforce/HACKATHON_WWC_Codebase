@@ -15,26 +15,28 @@ function loadQuestion() {
   $("#currentNo").val(no);
 
   $.ajax({
-    type: "GET",
-    url: "app/question.php",
-    data: uri,
-    success: function (response) {
-      //console.log(response);
-      if (response !== "") {
-        questions = JSON.parse(response);
-        const q = questions[currentQuestion];
-        $(".quiz").html(q.category);
-        questionElement.textContent = q.question;
-        choicesElement.innerHTML = "";
-        for (let i = 0; i < q.choices.length; i++) {
-          const choice = document.createElement("button");
-          choice.textContent = q.choices[i];
-          choice.addEventListener("click", () => checkAnswer(i));
-          choicesElement.appendChild(choice);
+    type: "GET", 
+    url: "app/question.php", 
+    data: uri, 
+    success: function (response) { 
+        if (response !== '')
+        {
+          questions = JSON.parse(response);
+          const q = questions[currentQuestion];
+          $('.quiz').html(q.category);
+          questionElement.textContent = q.question;
+          choicesElement.innerHTML = "";
+          for (let i = 0; i < q.choices.length; i++) {
+            const choice = document.createElement("button");
+            choice.textContent = q.choices[i];
+            choice.addEventListener("click", () => checkAnswer(i));
+            choicesElement.appendChild(choice);
+          }
         }
-      } else {
-        $("#nextButton").html("Check Your Score");
-      }
+        else 
+        {     
+          $("#nextButton").html('Check Your Score');
+        }
     },
   });
 }
